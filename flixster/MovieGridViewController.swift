@@ -11,6 +11,7 @@ import AlamofireImage
 class MovieGridViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet var collectionView: UICollectionView!
+    
     var movies = [[String:Any]]()
     
     override func viewDidLoad() {
@@ -18,6 +19,14 @@ class MovieGridViewController: UIViewController, UICollectionViewDelegate, UICol
 
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        let spacing: CGFloat = 4
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.minimumLineSpacing = spacing
+        layout.minimumInteritemSpacing = 0
+
+        let width = (view.frame.size.width - spacing * 2 ) / 3
+        layout.itemSize = CGSize(width: width, height: width*(3/2))
         
         // Get list of movies similar to wonder woman
         // https://api.themoviedb.org/3/movie/{movie_id}/similar?api_key=<<api_key>>&language=en-US&page=1
