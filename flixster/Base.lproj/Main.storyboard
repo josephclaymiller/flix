@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,21 +63,49 @@
             </objects>
             <point key="canvasLocation" x="691" y="849"/>
         </scene>
-        <!--Movie Grid View Controller-->
+        <!--Superhero-->
         <scene sceneID="iE5-dO-shD">
             <objects>
                 <viewController id="zH6-kV-YGx" customClass="MovieGridViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DSo-Uu-PbS">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xhq-qS-oJc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="RO2-Aw-IiD"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ZC3-dm-htT"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BmX-Gc-Gt3">
+                            <size key="itemSize" width="200" height="267"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="Gcj-yo-FMt" customClass="MovieGridCell" customModule="flixster" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Iv-hI-PYs">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="267"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EqI-Cx-a4s">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="267"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="200" height="267"/>
+                                <connections>
+                                    <outlet property="posterView" destination="EqI-Cx-a4s" id="q7n-yX-9KS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Superhero" id="ZC3-dm-htT"/>
+                    <connections>
+                        <outlet property="collectionView" destination="xhq-qS-oJc" id="JD1-cC-B6X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TfU-Jf-p0q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1513" y="849"/>
+            <point key="canvasLocation" x="1511.5942028985507" y="848.64130434782612"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WcK-FA-uKy">
@@ -146,7 +175,7 @@
         <scene sceneID="Z0z-kh-B85">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bdf-bY-LQH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Now Playing" selectedImage="now_playing_tabbar_item" id="Bxv-bt-1Us"/>
+                    <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" id="Bxv-bt-1Us"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2WK-CN-I9U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -165,7 +194,7 @@
         <scene sceneID="GxD-g8-sI7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KBL-hl-jI4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Superhero" selectedImage="superhero_tabbar_item" id="0JX-2q-19W"/>
+                    <tabBarItem key="tabBarItem" title="Superhero" image="superhero_tabbar_item" id="0JX-2q-19W"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XPO-eU-He6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
