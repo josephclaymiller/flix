@@ -15,9 +15,9 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
 ### App Walkthrough GIFs
-<img src="flix_detail.gif" width=250>
+<img src="flix_detail.gif" width=250><br>
 <img src="flix_grid.gif" width=250><br>
-GIF created with [GIPHY Capture](https://giphy.com/apps/giphycapture/)
+GIFs created with [GIPHY Capture](https://giphy.com/apps/giphycapture/)
 
 ### Notes
 At first I had trouble getting the images to load in the grid layout but I had just forgoten to call `reloadData()` on the `CollectionView` after getting the list of movies.
