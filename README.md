@@ -14,8 +14,10 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
 - [ ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
-### App Walkthrough GIF
-<img src="flix_part2.gif" width=250><br>
+### App Walkthrough GIFs
+<img src="flix_detail.gif" width=250>
+<img src="flix_grid.gif" width=250><br>
+GIF created with [GIPHY Capture](https://giphy.com/apps/giphycapture/)
 
 ### Notes
 At first I had trouble getting the images to load in the grid layout but I had just forgoten to call `reloadData()` on the `CollectionView` after getting the list of movies.
@@ -37,6 +39,7 @@ At first I had trouble getting the images to load in the grid layout but I had j
 
 ### App Walkthrough GIF
 <img src="flix.gif" width=250><br>
+GIF created with [Recordit](https://recordit.co/)
 
 ### Notes
 I encountered a challenge loading the images because I was using HTTP instead of HTTPS. Xcode gave an error which I researched online and found a solution was to set `Allow Arbitrary Loads` to `YES` under `App Transport Security Settings` in `Info.plist`. This removed a security requirement Xcode had in place and worked to load the images, however, I later realized that there was no need to change the app settings as I hadn't copied the base URL correctly and I actually should have been using HTTPS.
