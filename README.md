@@ -18,7 +18,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 <img src="flix_part2.gif" width=250><br>
 
 ### Notes
-Describe any challenges encountered while building the app.
+At first I had trouble getting the images to load in the grid layout but I had just forgoten to call `reloadData()` on the `CollectionView` after getting the list of movies.
 
 ---
 
