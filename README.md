@@ -35,7 +35,7 @@ At first I had trouble getting the images to load in the grid layout but I had j
 
 #### BONUS
 - [ ] (2pt) User can view the app on various device sizes and orientations.
-- [ ] (1pt) Run your app on a real device.
+- [x] (1pt) Run your app on a real device.
 
 ### App Walkthrough GIF
 <img src="flix.gif" width=250><br>
@@ -43,3 +43,4 @@ GIF created with [Recordit](https://recordit.co/)
 
 ### Notes
 I encountered a challenge loading the images because I was using HTTP instead of HTTPS. Xcode gave an error which I researched online and found a solution was to set `Allow Arbitrary Loads` to `YES` under `App Transport Security Settings` in `Info.plist`. This removed a security requirement Xcode had in place and worked to load the images, however, I later realized that there was no need to change the app settings as I hadn't copied the base URL correctly and I actually should have been using HTTPS.
+In order to get the app to run on my iPhone which is running iOS 13.1, I had to lower the deployment target.
