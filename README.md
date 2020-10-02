@@ -43,4 +43,5 @@ GIF created with [Recordit](https://recordit.co/)
 
 ### Notes
 I encountered a challenge loading the images because I was using HTTP instead of HTTPS. Xcode gave an error which I researched online and found a solution was to set `Allow Arbitrary Loads` to `YES` under `App Transport Security Settings` in `Info.plist`. This removed a security requirement Xcode had in place and worked to load the images, however, I later realized that there was no need to change the app settings as I hadn't copied the base URL correctly and I actually should have been using HTTPS.
+<br>
 In order to get the app to run on my iPhone which is running iOS 13.1, I had to lower the deployment target.
