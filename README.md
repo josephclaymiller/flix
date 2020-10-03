@@ -11,12 +11,13 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [x] (5pts) User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView.
 
 #### BONUS
-- [ ] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
+- [x] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
 - [ ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
 
 ### App Walkthrough GIFs
 <img src="flix_detail.gif" width=250><br>
 <img src="flix_grid.gif" width=250><br>
+<img src="flix_grid_to_detail.gif" width=250><br>
 GIFs created with [GIPHY Capture](https://giphy.com/apps/giphycapture/)
 
 ### Notes
@@ -37,7 +38,9 @@ At first I had trouble getting the images to load in the grid layout but I had j
 - [ ] (2pt) User can view the app on various device sizes and orientations.
 - [x] (1pt) Run your app on a real device.
 
-### App Walkthrough GIF
+### App Walkthrough GIFs
+<img src="flix_icon.gif" width=250><br>
+GIF created with [GIPHY Capture](https://giphy.com/apps/giphycapture/)<br>
 <img src="flix.gif" width=250><br>
 GIF created with [Recordit](https://recordit.co/)
 
