@@ -25,8 +25,9 @@ class MovieGridViewController: UIViewController, UICollectionViewDelegate, UICol
         layout.minimumLineSpacing = spacing
         layout.minimumInteritemSpacing = 0
 
+        // Standard movie poster size is 27×40 inches
         let width = (view.frame.size.width - spacing * 2 ) / 3
-        layout.itemSize = CGSize(width: width, height: width*(3/2))
+        layout.itemSize = CGSize(width: width, height: width*(40/27))
         
         // Get list of movies similar to wonder woman
         // https://api.themoviedb.org/3/movie/{movie_id}/similar?api_key=<<api_key>>&language=en-US&page=1
@@ -67,14 +68,18 @@ class MovieGridViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        let cell = sender as! UICollectionViewCell
+        let indexPath = collectionView.indexPath(for: cell)!
+        let movie = movies[indexPath.row]
         // Pass the selected object to the new view controller.
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        // Deselect the cell?
     }
-    */
 
 }
